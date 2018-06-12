@@ -1,8 +1,0 @@
-adapter–>适配器的类
-base–>基础的配置类
-bean–>实体对象
-exception–>异常处理对象
-http–>网络相关
-ui–>所有的页面（包括fragment【/ui/fragment】）
-utils–>工具类
-widget–>自定义控件类。
