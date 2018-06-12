@@ -42,6 +42,15 @@ public class LoginActivity extends BaseActivity implements LoginContract.ILoginV
         mLoginPresenter = new LoginPresenter(this);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mLoginPresenter != null) {
+            mLoginPresenter.onDestroy();
+            mLoginPresenter = null;
+            System.gc();
+        }
+    }
 
     @Override
     public Context getCurContext() {
