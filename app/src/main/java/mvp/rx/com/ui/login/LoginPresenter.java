@@ -46,4 +46,12 @@ public class LoginPresenter implements LoginContract.ILoginPresenter {
             }
         });
     }
+
+    @Override
+    public void onDestroy() {
+        if(mLoginView != null){
+            mLoginView = null;
+            System.gc();
+        }
+    }
 }

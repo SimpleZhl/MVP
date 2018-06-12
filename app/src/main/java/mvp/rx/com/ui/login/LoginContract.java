@@ -2,6 +2,7 @@ package mvp.rx.com.ui.login;
 
 import android.content.Context;
 
+import mvp.rx.com.base.BasePresenter;
 import mvp.rx.com.base.OnHttpCallBack;
 import mvp.rx.com.bean.TokenResult;
 import mvp.rx.com.bean.UserInfo;
@@ -35,7 +36,7 @@ public interface LoginContract {
     /**
      * P视图与逻辑处理的连接层
      */
-    interface ILoginPresenter {
+    interface ILoginPresenter extends BasePresenter {
         void login();//唯一的桥梁就是登录了
     }
 
